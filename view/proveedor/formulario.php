@@ -31,17 +31,6 @@
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <label for="price" class="form-label">Price: </label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text fa fa-money"></span>
-                        <input type="text" name="price" class="form-control" id="price" placeholder="Price" required
-                            value="<?php echo $prod->price; ?>">
-                        <div class="invalid-feedback">
-                            Price is required.
-                        </div>
-                    </div>
-                </div>
             </div>
 
 
