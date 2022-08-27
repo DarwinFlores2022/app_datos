@@ -57,7 +57,7 @@
                     <div class="d-flex flex-column sim">
 
                         <span>Bienvenido: Admin</span>
-                        <small class="text-primary"><a href="#">Cerrar Sessión</a></small>
+                        <small class="text-primary"><a href="?view=usuario&a=cerrarSesion">Cerrar Sessión</a></small>
 
                     </div>
                 </div>

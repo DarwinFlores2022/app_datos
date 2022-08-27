@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class HomeController
 {
 
@@ -13,6 +13,9 @@ class HomeController
 
     public function Index()
     {
+        if (!$_SESSION["ok"]) {
+            header('Location: ?view=usuario');
+        }
         $title = "PÁGINA PRINCIPAL";
         require_once 'view/assets/header.php';
         require_once 'view/home.php';

@@ -14,6 +14,20 @@ class ProductController
 
     function Index()
     {
+        $mensaje = "";
+        if (isset($_REQUEST["msg"])) {
+
+            if ($_REQUEST["msg"] == "save") {
+                $mensaje = '<div class="alert alert-success" role="alert">
+            Datos almacenados/ Actualizados correctamente!
+          </div>';
+            } else {
+                $mensaje = '<div class="alert alert-danger" role="alert">
+            Error!
+          </div>';
+            }
+        }
+
 
         $prod = new Product();
         $category = new Category();
@@ -37,10 +51,16 @@ class ProductController
         $prod->price = $_REQUEST["price"];
         $prod->idcategory = $_REQUEST["idcategories"];
 
-        $prod->id > 0
-            ? $this->model->Actualizar($prod)
-            : $this->model->Registrar($prod);
 
-        header('Location: ?view=product');
+
+        if ($prod->id > 0) {
+            $this->model->Actualizar($prod);
+        } else {
+            $this->model->Registrar($prod);
+        }
+
+
+
+        header('Location: ?view=product&msg=save');
     }
 }

@@ -4,7 +4,7 @@
     <hr>
 
 </div>
-
+<?php echo $mensaje; ?>
 <div class="row g-6">
     <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">

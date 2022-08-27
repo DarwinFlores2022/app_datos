@@ -88,7 +88,3 @@ $dompdf->render();
 // Output the generated PDF to Browser
 $dompdf->stream("mi.pdf", array("Attachment" => 0));
 ?>
-
-<script type="text/php">
-
-</script>
