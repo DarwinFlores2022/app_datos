@@ -1,10 +1,10 @@
 <?php
 class Conexion
 {
-    private $servidor = "localhost";
-    private $nombredb = "mvc";
-    private $usuario = "root";
-    private $password = "";
+    private $servidor = "bod6pgzou7dhl5z3zhc0-mysql.services.clever-cloud.com";
+    private $nombredb = "bod6pgzou7dhl5z3zhc0";
+    private $usuario = "uliugavf08ai03uk";
+    private $password = "F9ht55y9HYJzZAcUclYN";
     private $puerto = "3306";
 
 

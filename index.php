@@ -3,7 +3,7 @@ require_once 'config/Conexion.php';
 
 $controller = isset($_GET["view"]) ? $_GET["view"] : "home";
 if (file_exists("controller/" . $controller . ".controller.php")) {
-    # code...
+    # code... 
 
     // Todo esta lógica hara el papel de un FrontController
     if (!isset($_REQUEST['view'])) {
