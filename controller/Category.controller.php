@@ -20,17 +20,5 @@ class CategoryController
         require_once 'view/assets/pie.php';
     }
 
-    public function Pdf()
-    {
-        $category = new Category();
-        $title = "Categories";
-        require_once 'view/pdf/category.php';
-    }
-
-    public function Excel()
-    {
-        $category = new Category();
-        $title = "Categories";
-        require_once 'excel/category.php';
-    }
+   
 }
