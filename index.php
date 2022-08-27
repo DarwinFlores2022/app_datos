@@ -2,12 +2,12 @@
 require_once 'config/Conexion.php';
 
 $controller = isset($_GET["view"]) ? $_GET["view"] : "home";
-if (file_exists($_SERVER [ 'SERVER_NAME' ]."controller/" . $controller . ".controller.php")) {
+if (file_exists("controller/" . $controller . ".controller.php")) {
     # code... 
 
     // Todo esta lógica hara el papel de un FrontController
     if (!isset($_REQUEST['view'])) {
-        require_once $_SERVER [ 'SERVER_NAME' ]."controller/$controller.controller.php";
+        require_once "controller/$controller.controller.php";
         $controller = ucwords($controller) . 'Controller';
         $controller = new $controller;
         $controller->Index();
@@ -17,7 +17,7 @@ if (file_exists($_SERVER [ 'SERVER_NAME' ]."controller/" . $controller . ".contr
         $accion = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'Index';
 
         // Instanciamos el controlador
-        require_once $_SERVER [ 'SERVER_NAME' ]."controller/$controller.controller.php";
+        require_once "controller/$controller.controller.php";
         $controller = ucwords($controller) . 'Controller';
         $controller = new $controller;
 
