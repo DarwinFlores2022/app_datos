@@ -48,7 +48,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Providers</a>
+                            <a class="nav-link" href="?view=proveedor">Providers</a>
                         </li>
 
 
