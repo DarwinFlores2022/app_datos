@@ -7,7 +7,7 @@ if (file_exists("controller/" . $controller . ".controller.php")) {
 
     // Todo esta lógica hara el papel de un FrontController
     if (!isset($_REQUEST['view'])) {
-        require_once "controller/$controller.controller.php";
+        include_once "controller/$controller.controller.php";
         $controller = ucwords($controller) . 'Controller';
         $controller = new $controller;
         $controller->Index();
@@ -17,7 +17,7 @@ if (file_exists("controller/" . $controller . ".controller.php")) {
         $accion = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'Index';
 
         // Instanciamos el controlador
-        require_once "controller/$controller.controller.php";
+        include_once "controller/$controller.controller.php";
         $controller = ucwords($controller) . 'Controller';
         $controller = new $controller;
 
@@ -25,9 +25,6 @@ if (file_exists("controller/" . $controller . ".controller.php")) {
         call_user_func(array($controller, $accion));
     }
 } else {
-    require_once "controller/$controller.controller.php";
-    $controller = ucwords($controller) . 'Controller';
-    $controller = new $controller;
-    $controller->Index(); include "view/error.php";
+    include "view/error.php";
 }
 ?>
