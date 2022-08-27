@@ -2,7 +2,7 @@
 class Conexion
 {
     private $servidor = "";
-    private $nombredb = "bod6pgzou7dhl5z3zhc0";
+    private $nombredb = "";
     private $usuario = "uliugavf08ai03uk";
     private $password = "F9ht55y9HYJzZAcUclYN";
     private $puerto = "3306";
