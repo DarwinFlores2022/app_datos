@@ -25,6 +25,9 @@ if (file_exists("controller/" . $controller . ".controller.php")) {
         call_user_func(array($controller, $accion));
     }
 } else {
-    include "view/error.php";
+    require_once "controller/$controller.controller.php";
+    $controller = ucwords($controller) . 'Controller';
+    $controller = new $controller;
+    $controller->Index(); include "view/error.php";
 }
 ?>
